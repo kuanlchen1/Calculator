@@ -24,10 +24,10 @@ class CalculatorBrain {
         "e" : Operation.Constant(M_E),
         "√" : Operation.UnaryOperation(sqrt),
         "cos" : Operation.UnaryOperation(cos),
-        "+" : Operation.BinaryOperation({ $0 + $1 }),
-        "−" : Operation.BinaryOperation({ $0 - $1 }),
-        "×" : Operation.BinaryOperation({ $0 * $1 }),
-        "÷" : Operation.BinaryOperation({ $0 / $1 }),
+        "+" : Operation.BinaryOperation(+),    // $0 + $1 -> + : Operator Functions
+        "−" : Operation.BinaryOperation(-),
+        "×" : Operation.BinaryOperation(*),
+        "÷" : Operation.BinaryOperation(/),
         "=" : Operation.Equals
     ]
     
